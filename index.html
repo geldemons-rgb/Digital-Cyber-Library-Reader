@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber-Library & Reader</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Навигация -->
+    <header class="navbar">
+      <div class="logo"><i class="fa-solid fa-book-bookmark"></i> CYBER<span>LIB</span></div>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Поиск книги или автора...">
+      </div>
+    </header>
+
+    <!-- Фильтры категорий -->
+    <div class="categories">
+      <button class="cat-btn active" data-cat="all">Все книги</button>
+      <button class="cat-btn" data-cat="it">IT & Кодинг</button>
+      <button class="cat-btn" data-cat="scifi">Научная фантастика</button>
+      <button class="cat-btn" data-cat="science">Наука</button>
+    </div>
+
+    <!-- Каталог книг -->
+    <main class="books-grid" id="booksGrid">
+      <!-- Книги генерируются через JS -->
+    </main>
+  </div>
+
+  <!-- Модальное окно просмотра книги -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="close-btn" id="closeModal">&times;</button>
+      <div class="modal-content">
+        <div class="modal-icon"><i class="fa-solid fa-book-open"></i></div>
+        <h2 id="modalTitle">Название книги</h2>
+        <p class="modal-author" id="modalAuthor">Автор</p>
+        <p class="modal-desc" id="modalDesc">Описание книги...</p>
+        <div class="reading-progress">
+          <span>Прогресс чтения:</span>
+          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+        <button class="read-btn">Читать далее</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
